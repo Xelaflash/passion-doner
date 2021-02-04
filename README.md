@@ -1,1 +1,7 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Passion Döner
+Website to register and rate Dôner Kebab
+
+## Stack
+Rails 6 / PostgreSQL / React / Tailwind
+
+*App created during Covid lockdown in Feb 2021*
