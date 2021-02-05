@@ -1,0 +1,33 @@
+<div class="separator-gradient-footer"></div>
+<footer class="footer">
+  <div class="logo-footer">
+    <%= link_to "/", class: "" do %>
+      <%= image_tag "logo" %>
+    <% end %>
+  </div>
+  <div class="copyright">
+    <p>
+      &copy;
+      <span>Passion Döner</span>
+      <span><%= Date.today.year%>.</span>
+      <span>All rights reserved</span>
+    </p>
+  </div>
+  <div id="colophon">
+    <p>
+      Website coded by
+      <a
+        href="https://www.alexgwebdev.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://res.cloudinary.com/dcf4y5ngp/image/upload/v1595504600/logo_3d_colors.png"
+          alt="Alex G - Web developer"
+          height="40"
+          class="flip"
+        />
+        </a>
+      </p>
+    </div>
+  </footer>
