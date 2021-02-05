@@ -1,0 +1,8 @@
+<div class="">
+<h1>Passion Doner</h1>
+<ul>
+  <% @kebabs.each do |kebab| %>
+    <li><%= link_to kebab.name, kebab_path(kebab)%></li>
+  <% end %>
+</ul>
+</div>

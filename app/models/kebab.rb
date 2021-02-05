@@ -1,0 +1,2 @@
+class Kebab < ApplicationRecord
+end

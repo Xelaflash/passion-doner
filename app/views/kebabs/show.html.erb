@@ -1,0 +1,7 @@
+
+<h1>Kebab SHow</h1>
+<%= @kebab.name %>
+<%= @kebab.address %>
+      <%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" } do %>
+       Delete
+      <% end %>
