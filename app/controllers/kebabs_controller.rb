@@ -1,6 +1,6 @@
 class KebabsController < ApplicationController
   # skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_kebab, only: %i[show update destroy]
+  before_action :set_kebab, only: %i[show edit update destroy]
 
   def index
     @kebabs = Kebab.all
@@ -22,6 +22,8 @@ class KebabsController < ApplicationController
       render :new
     end
   end
+
+  def edit; end
 
   def update
     if @kebab.update(kebab_params)

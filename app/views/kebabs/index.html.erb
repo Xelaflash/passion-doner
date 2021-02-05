@@ -1,8 +1,10 @@
-<div class="">
-<h1>Passion Doner</h1>
+<div class="container">
+<h1 class="text-center">Passion Döner</h1>
 <ul>
   <% @kebabs.each do |kebab| %>
     <li><%= link_to kebab.name, kebab_path(kebab)%></li>
   <% end %>
 </ul>
+
+<%= link_to 'Add a Kebab', new_kebab_path, class: 'btn btn-primary'%>
 </div>

@@ -1,7 +1,21 @@
+<div class="container">
 
-<h1>Kebab SHow</h1>
+<h1 class="text-center">Kebab SHow</h1>
 <%= @kebab.name %>
 <%= @kebab.address %>
-      <%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" } do %>
-       Delete
-      <% end %>
+
+<hr>
+
+<%= link_to edit_kebab_path(@kebab), class: 'btn btn-primary' do %>
+  <i class="fa fa-pencil"></i> Edit this kebab
+<% end %>
+
+<%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" }, class: 'btn btn-danger' do %>
+  Delete
+<% end %>
+
+<hr>
+<%= link_to kebabs_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>
+</div>
