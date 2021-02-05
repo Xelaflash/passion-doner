@@ -1,5 +1,5 @@
 # Passion Döner
-Website to register and rate Dôner Kebab
+Website to register and rate Döner Kebab
 
 ## Stack
 Rails 6 / PostgreSQL / React / Tailwind
