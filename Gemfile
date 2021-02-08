@@ -26,13 +26,13 @@ gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
-
 gem 'autoprefixer-rails'
+gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'font-awesome-sass'
 gem 'friendly_id'
 gem 'simple_form'
+gem 'turbolinks_render'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'

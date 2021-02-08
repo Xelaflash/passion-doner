@@ -6,6 +6,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "jquery-bar-rating/dist/themes/css-stars";
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
@@ -14,4 +15,12 @@ h1 {
   font-family: $headers-font;
   letter-spacing: 2px;
   margin: 20px auto;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+abbr[title="required"] {
+  display: none;
 }

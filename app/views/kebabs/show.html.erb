@@ -9,30 +9,39 @@
   <%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" }, class: 'btn btn-danger' do %>
     Delete
   <% end %>
-  <div class="rate-btn">
-    <%= link_to 'Rate this Kebab', '', data: {toggle: "modal", target: "#rating-modal"}, class: " btn-ghost"%>
-  </div>
   <hr>
   <%= link_to kebabs_path do %>
     <i class="fa fa-history"></i> Back to list
   <% end %>
 </div>
-<div class="modal fade" id="rating-modal" tabindex="-1" role="dialog" aria-labelledby="Rate the kebab" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content container">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-title">Enjoy this Kebab?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-xs-4 text-center">
-            <%= render "reviews/new", kebab: @kebab, review: @review %>
-          </div>
+<div class="rating-section container">
+  <div class="kebab-rating-container">
+    <h4 id="rating-title">Our community rated this Kebab</h4>
+    <div class="kebab-rating">
+      <div class="stars-wrapper">
+        <% if  @kebab.reviews.present? %>
+          <% count = 0 %>
+          <% 5.times do %>
+            <% if @kebab.average_rating.round > count %>
+              <span class="stars star-colored"></span>
+            <% else %>
+              <span class="stars star-blank"></span>
+            <% end %>
+            <% count += 1 %>
+          <% end %>
         </div>
-      </div>
+        <div id="rating-txt">
+          <% if @kebab.reviews.count == 1 %>
+            <span>(<%= @kebab.reviews.count %> review)</span>
+          <% else %>
+            <span>(<%= @kebab.reviews.count %> reviews)</span>
+          <% end %>
+        </div>
+      <% else %>
+        <p>Be the first to let a review</p>
+      <% end %>
+    </div>
+    <div class="review-section">
+      <%= render "reviews/new", kebab: @kebab, review: @review %>
     </div>
   </div>
-</div>

@@ -1,4 +1,11 @@
 class ReviewsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[new create]
+
+  def new
+    @kebab = Kebab.friendly.find(params[:kebab_id])
+    @review = Review.new
+  end
+
   def create
     @kebab = Kebab.friendly.find(params[:kebab_id])
     @review = Review.new(review_params)
@@ -7,7 +14,6 @@ class ReviewsController < ApplicationController
       flash[:success] = 'Review successfully created'
       redirect_to kebab_path(@kebab)
     else
-      flash[:alert] = 'Something went wrong'
       render 'kebabs/show'
     end
   end

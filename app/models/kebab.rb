@@ -7,4 +7,8 @@ class Kebab < ApplicationRecord
 
   extend FriendlyId
   friendly_id :name, use: :slugged
+
+  def average_rating
+    reviews.average(:overall_rating)
+  end
 end

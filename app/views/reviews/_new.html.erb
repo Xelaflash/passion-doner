@@ -1,12 +1,13 @@
 <h2 class="text-center">Rate this Döner</h2>
 <%= simple_form_for([kebab, review], remote: true,  html: { class: "review_form" }) do |f| %>
-  <%= f.input :bread_rating, collection: 1..5, label: "The bread" %>
-  <%= f.input :meat_rating, collection: 1..5, label: "The meat" %>
-  <%= f.input :fries_rating, collection: 1..5, label: "The fries" %>
-  <%= f.input :sauces_rating, collection: 1..5, label: "The sauces" %>
-  <%= f.input :quantity_rating, collection: 1..5, label: "The quantity" %>
-  <%= f.input :quality_price_ratio, collection: 1..5, label: "The quality/price ratio" %>
-  <%= f.input :overall_rating, collection: 1..5, label: "Overall rating" %>
+  <%= f.error_notification %>
+  <%= f.input :bread_rating, as: :select, collection: 1..5, label: "The bread", input_html: {class: "rating_fields"}, error: f.full_error(:bread_rating)%>
+  <%= f.input :meat_rating, as: :select, collection: 1..5, label: "The meat", input_html:{class: "rating_fields"} %>
+  <%= f.input :fries_rating, as: :select, collection: 1..5, label: "The fries", input_html: {class: "rating_fields"} %>
+  <%= f.input :sauces_rating, as: :select, collection: 1..5, label: "The sauces", input_html: {class: "rating_fields"} %>
+  <%= f.input :quantity_rating, as: :select, collection: 1..5, label: "The quantity", input_html: {class: "rating_fields"}%>
+  <%= f.input :quality_price_ratio, as: :select, collection: 1..5, label: "The quality/price ratio", input_html: {class: "rating_fields"} %>
+  <%= f.input :overall_rating, as: :select, collection: 1..5, label: "Overall rating", input_html: {class: "rating_fields"} %>
   <%= f.input :content, label: "Comment your review" %>
-  <%= f.button :submit, class: "d-none" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
