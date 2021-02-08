@@ -1,21 +1,38 @@
 <div class="container">
-
-<h1 class="text-center">Kebab SHow</h1>
-<%= @kebab.name %>
-<%= @kebab.address %>
-
-<hr>
-
-<%= link_to edit_kebab_path(@kebab), class: 'btn btn-primary' do %>
-  <i class="fa fa-pencil"></i> Edit this kebab
-<% end %>
-
-<%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" }, class: 'btn btn-danger' do %>
-  Delete
-<% end %>
-
-<hr>
-<%= link_to kebabs_path do %>
-  <i class="fa fa-history"></i> Back to list
-<% end %>
+  <h1 class="text-center">Kebab SHow</h1>
+  <%= @kebab.name %>
+  <%= @kebab.address %>
+  <hr>
+  <%= link_to edit_kebab_path(@kebab), class: 'btn btn-primary' do %>
+    <i class="fa fa-pencil"></i> Edit this kebab
+  <% end %>
+  <%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" }, class: 'btn btn-danger' do %>
+    Delete
+  <% end %>
+  <div class="rate-btn">
+    <%= link_to 'Rate this Kebab', '', data: {toggle: "modal", target: "#rating-modal"}, class: " btn-ghost"%>
+  </div>
+  <hr>
+  <%= link_to kebabs_path do %>
+    <i class="fa fa-history"></i> Back to list
+  <% end %>
+</div>
+<div class="modal fade" id="rating-modal" tabindex="-1" role="dialog" aria-labelledby="Rate the kebab" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content container">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Enjoy this Kebab?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-4 text-center">
+            <%= render "reviews/new", kebab: @kebab, review: @review %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

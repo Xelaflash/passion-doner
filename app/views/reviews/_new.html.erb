@@ -1,0 +1,12 @@
+<h2 class="text-center">Rate this Döner</h2>
+<%= simple_form_for([kebab, review], remote: true,  html: { class: "review_form" }) do |f| %>
+  <%= f.input :bread_rating, collection: 1..5, label: "The bread" %>
+  <%= f.input :meat_rating, collection: 1..5, label: "The meat" %>
+  <%= f.input :fries_rating, collection: 1..5, label: "The fries" %>
+  <%= f.input :sauces_rating, collection: 1..5, label: "The sauces" %>
+  <%= f.input :quantity_rating, collection: 1..5, label: "The quantity" %>
+  <%= f.input :quality_price_ratio, collection: 1..5, label: "The quality/price ratio" %>
+  <%= f.input :overall_rating, collection: 1..5, label: "Overall rating" %>
+  <%= f.input :content, label: "Comment your review" %>
+  <%= f.button :submit, class: "d-none" %>
+<% end %>

@@ -6,7 +6,10 @@ class KebabsController < ApplicationController
     @kebabs = Kebab.all
   end
 
-  def show; end
+  def show
+    @review = Review.new
+    @reviews = Review.all
+  end
 
   def new
     @kebab = Kebab.new
@@ -48,6 +51,6 @@ class KebabsController < ApplicationController
   end
 
   def set_kebab
-    @kebab = Kebab.find(params[:id])
+    @kebab = Kebab.friendly.find(params[:id])
   end
 end
