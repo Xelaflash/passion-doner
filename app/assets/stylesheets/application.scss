@@ -15,10 +15,11 @@ body {
   font-family: $body-font;
 }
 
-h1 {
+.title {
   font-family: $headers-font;
   letter-spacing: 2px;
   margin: 20px auto;
+  width: fit-content;
 }
 
 .invalid-feedback {
@@ -27,4 +28,11 @@ h1 {
 
 abbr[title="required"] {
   display: none;
+}
+
+.back_to_list {
+  color: $gray;
+  .fa-history {
+    margin-right: 5px;
+  }
 }

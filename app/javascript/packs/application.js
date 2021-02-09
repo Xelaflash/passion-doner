@@ -1,6 +1,7 @@
 // import './hello_react';
 import 'bootstrap';
 import { initStarRating } from '../plugins/init_star_rating';
+import { previewImageOnFileSelect } from '../components/photo_preview';
 
 require('@rails/ujs').start();
 require('turbolinks').start();
@@ -13,3 +14,4 @@ $(function() {
 });
 
 initStarRating();
+previewImageOnFileSelect();
