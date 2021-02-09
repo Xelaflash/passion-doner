@@ -11,6 +11,10 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  font-family: $body-font;
+}
+
 h1 {
   font-family: $headers-font;
   letter-spacing: 2px;
