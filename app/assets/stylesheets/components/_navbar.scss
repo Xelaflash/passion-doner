@@ -57,3 +57,12 @@ nav.stroke .navbar-link:after {
 nav.stroke .navbar-link:hover:after {
   width: 100%;
 }
+
+#navbarDropdown {
+  font-size: 25px;
+  color: #aaa;
+  cursor: pointer;
+  &:hover {
+    color: #555;
+  }
+}
