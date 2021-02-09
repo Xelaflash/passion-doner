@@ -1,5 +1,10 @@
 <div class="container">
   <h1 class="text-center">Passion Döner</h1>
+  <% if user_signed_in? && current_user.admin? %>
+    <div class="cta-wrapper">
+      <%= link_to 'Add a Kebab', new_kebab_path, class: 'gradient-button text-center'%>
+    </div>
+  <% end %>
   <div class="search-from-nav">
     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="search-form-control form-group">
@@ -15,5 +20,4 @@
       <li><%= link_to kebab.name, kebab_path(kebab)%></li>
     <% end %>
   </ul>
-  <%= link_to 'Add a Kebab', new_kebab_path, class: 'btn btn-primary'%>
 </div>
