@@ -1,0 +1,119 @@
+.btn {
+  background: $seaweed;
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: white;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.form-control::placeholder {
+  font-weight: lighter;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.btn-devise {
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+}
+
+.log-page {
+  min-height: calc(100vh - 150px);
+  position: relative;
+}
+
+.log-page.register {
+  .form-login-devise {
+    margin: 50px 0;
+  }
+}
+
+.log-page.edit-account {
+  .form-login-devise {
+    margin: 80px 0 50px;
+  }
+}
+
+.log-page {
+  .form-login-devise {
+    margin: 80px 0 50px;
+  }
+}
+
+label {
+  font-size: 18px;
+}
+
+.form-all {
+  background: white;
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 3px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .devise-form-centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#user_remember_me {
+  margin-right: 8px;
+  vertical-align: 2px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  font-size: 15px;
+  font-weight: 400;
+  color: $seaweed;
+}
+
+.devise-links:hover {
+  opacity: 0.4;
+}
+
+@media (max-width: 568px) {
+  .form-login-devise {
+    margin: 40px 0 40px 0;
+  }
+
+  .form-all h2 {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  .form-login-devise {
+    margin: 40px 0 40px 0;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .form-login-devise {
+    margin: 100px 0 40px 0;
+  }
+}

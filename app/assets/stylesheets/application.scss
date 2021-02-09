@@ -15,6 +15,10 @@ body {
   font-family: $body-font;
 }
 
+a {
+  color: $gray;
+}
+
 .title {
   font-family: $headers-font;
   letter-spacing: 2px;

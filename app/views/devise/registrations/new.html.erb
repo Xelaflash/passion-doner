@@ -1,25 +1,38 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<div class="log-page register">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-10 mx-auto">
+        <div class="form-all">
+          <h2>Sign Up</h2>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs" id="start">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 mx-auto">
+                  <%= f.input :email, autofocus: true, placeholder: "pierre.durant@gmail.com" %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 col-md-8 mx-auto">
+                  <%= f.input :name, autofocus: true, placeholder: "Jean Blaguin" %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 col-md-8 mx-auto">
+                  <%= f.input :password, label: "Password", hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "•••••••••", required: true, error: 'Field is mandatory.' %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 col-md-8 mx-auto">
+                  <%= f.input :password_confirmation,label: "Confirm password", placeholder: "•••••••••", required: true %>
+                </div>
+              </div>
+              <div class="form-actions">
+                <%= f.button :submit, "Sign Up", class: "btn btn-devise"  %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
