@@ -47,7 +47,7 @@ class KebabsController < ApplicationController
   private
 
   def kebab_params
-    params.require(:kebab).permit(:name, :address)
+    params.require(:kebab).permit(:name, :address, :description, :photo)
   end
 
   def set_kebab
