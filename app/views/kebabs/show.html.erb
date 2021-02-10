@@ -1,18 +1,23 @@
-<div class="container">
-  <h1 class="text-center">Kebab SHow</h1>
-  <%= @kebab.name %>
-  <%= @kebab.address %>
-  <hr>
-  <%= link_to edit_kebab_path(@kebab), class: 'btn btn-primary' do %>
-    <i class="fa fa-pencil"></i> Edit this kebab
-  <% end %>
-  <%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" }, class: 'btn btn-danger' do %>
-    Delete
-  <% end %>
-  <hr>
+<div class="back-to-list">
   <%= link_to kebabs_path do %>
     <i class="fa fa-history"></i> Back to list
   <% end %>
+</div>
+<div class="container page-wrapper">
+  <h1 class="title"><%= @kebab.name %></h1>
+  <p class="kebab-address"><%= @kebab.address %></p>
+  <div class="kebab_actions-wrapper">
+    <% if user_signed_in? && current_user.admin? %>
+      <hr>
+      <%= link_to edit_kebab_path(@kebab), class: 'btn btn-primary' do %>
+        <i class="fas fa-edit"></i> Edit kebab
+      <% end %>
+      <%= link_to kebab_path(@kebab), method: :delete, data: { confirm: "Delete #{@kebab.name}?" }, class: 'btn btn-danger' do %>
+        <i class="fas fa-trash-alt"></i> Delete
+      <% end %>
+      <hr>
+    <% end %>
+  </div>
 </div>
 <div class="rating-section container">
   <div class="kebab-rating-container">

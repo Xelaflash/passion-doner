@@ -34,9 +34,33 @@ abbr[title="required"] {
   display: none;
 }
 
-.back_to_list {
+.sep {
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.back-to-list {
+  width: fit-content;
+  margin: 15px 20px;
   color: $gray;
   .fa-history {
     margin-right: 5px;
+  }
+}
+
+.page-wrapper {
+  margin-top: -20px;
+}
+
+.form-inputs {
+  margin: 5px auto;
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+  padding: 5px;
+  min-height: 40px;
+  &::placeholder {
+    font-weight: lighter;
+    font-size: 14px;
+    opacity: 0.9;
   }
 }

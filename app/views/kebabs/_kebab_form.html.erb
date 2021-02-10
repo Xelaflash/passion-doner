@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-6 new_kebab_form">
+    <div class="col-lg-6 col-md-10 mx-auto">
       <%= simple_form_for(@kebab) do |k| %>
-        <div class="form-group form-flex">
-          <%= k.input :name, input_html: {class: 'form-control flex-input'}, placeholder: "Kebab's Delight" %>
-          <%= k.input :address, input_html: {class: 'form-control flex-input'}, placeholder: "75 cours de verdun 75008 Paris" %>
+        <div class="wrap-input">
+          <%= k.input :name, input_html: {class: 'form-inputs kebab_new_inputs'}, placeholder: "Kebab's Delight" %>
+          <%= k.input :address, input_html: {class: 'form-inputs kebab_new_inputs'}, placeholder: "75 cours de verdun 75008 Paris" %>
         </div>
-        <div class="form-group">
-          <%= k.input :description, class: 'form-control' %>
+        <div class="wrap-input">
+          <%= k.input :description, input_html: {class: 'form-inputs kebab_new_inputs', id:'text-input'}, label: "Description"%>
         </div>
-        <div class="form-group">
+        <div class="photo-wrapper">
           <%= k.input :photo, input_html: { class: 'd-none' , id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
           <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
         </div>

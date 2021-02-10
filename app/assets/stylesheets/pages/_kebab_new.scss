@@ -2,30 +2,30 @@
   margin: 20px auto;
 }
 
-.form-flex {
-  display: flex;
+.kebab_new_inputs {
+  width: 98%;
 }
 
-.form-group {
+.kebab_description {
   width: 100%;
 }
 
-#kebab_name {
-  width: 80%;
+#text-input {
+  width: 100%;
+  min-height: 100px;
 }
 
-.flex-input {
-  margin: 0 5px;
-  &::placeholder {
-    font-weight: lighter;
-    font-size: 14px;
-    opacity: 0.8;
-  }
+.photo-wrapper {
+  text-align: center;
 }
 
 .kebab_photo {
   width: fit-content;
   margin: auto;
+}
+
+#photo-preview {
+  margin: 20px auto;
 }
 
 .upload-photo {

@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="text-center">Edit Kebab</h1>
+  <h1 class="title">Edit <%= @kebab.name %></h1>
   <%= render 'kebab_form', kebab: @kebab %>
   <hr>
   <%= link_to kebabs_path do %>

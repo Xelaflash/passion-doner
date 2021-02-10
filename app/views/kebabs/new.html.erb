@@ -1,8 +1,9 @@
-<div class="container">
+<div class="back-to-list">
+  <%= link_to kebabs_path do %>
+    <i class="fa fa-history"></i> Back to list
+  <% end %>
+</div>
+<div class="container page-wrapper">
   <h1 class="title">New Kebab</h1>
   <%= render 'kebab_form', kebab: @kebab %>
-  <hr>
-  <%= link_to kebabs_path, class: "back_to_list" do %>
-    <i class="fa fa-history"></i>Back to list
-  <% end %>
 </div>

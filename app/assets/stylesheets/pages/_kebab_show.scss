@@ -1,3 +1,38 @@
+.kebab-address {
+  width: fit-content;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 300;
+  color: $light-gray;
+}
+
+.kebab_actions-wrapper {
+  text-align: center;
+  a {
+    margin: 5px 10px;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+// review form
+#new_review {
+  label {
+    margin-bottom: -1px;
+  }
+  #review-text {
+    width: 100%;
+    min-height: 100px;
+  }
+}
+
+.wrap-input {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
 .stars-wrapper {
   p {
     margin: 1rem;
@@ -29,23 +64,18 @@
   font-size: 18px;
 }
 
-.rate-btn {
-  text-align: center;
-  margin: 30px auto;
-}
-
 .btn-ghost {
   color: $green;
   border: 1px solid $green;
   padding: 10px 25px;
   border-radius: 50px;
   font-weight: 400;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-ghost:hover {
-  opacity: 1;
   text-decoration: none;
-  color: $green;
+  background: $green;
+  color: $white;
 }
+// END
