@@ -1,4 +1,5 @@
 // import './hello_react';
+
 import 'bootstrap';
 import { initStarRating } from '../plugins/init_star_rating';
 import { previewImageOnFileSelect } from '../components/photo_preview';
@@ -13,5 +14,7 @@ $(function() {
   }, 5000);
 });
 
-initStarRating();
+document.addEventListener('turbolinks:load', function() {
+  initStarRating();
+});
 previewImageOnFileSelect();
