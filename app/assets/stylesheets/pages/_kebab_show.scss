@@ -16,7 +16,20 @@
   }
 }
 
+.rating-section {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+}
+
+.review-section {
+  flex-grow: 1;
+}
+
 // review form
+.review_section {
+  max-width: 500px;
+}
 #new_review {
   label {
     margin-bottom: -1px;
@@ -30,7 +43,7 @@
 .wrap-input {
   display: flex;
   justify-content: space-around;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .stars-wrapper {
@@ -66,6 +79,10 @@
 
 .review_content {
   width: 100%;
+}
+
+#create_kebab {
+  margin: 0 auto;
 }
 
 .btn-ghost {

@@ -20,6 +20,7 @@
   </div>
 </div>
 <div class="rating-section container">
+  <%# flex left %>
   <div class="kebab-rating-container">
     <h4 id="rating-title">Our community rated this Kebab</h4>
     <div class="kebab-rating">
@@ -46,7 +47,9 @@
         <p>Be the first to let a review</p>
       <% end %>
     </div>
-    <div class="review-section">
-      <%= render "reviews/new", kebab: @kebab, review: @review %>
-    </div>
   </div>
+  <%# flex right %>
+  <div class="review-section">
+    <%= render "reviews/new", kebab: @kebab, review: @review %>
+  </div>
+</div>
