@@ -35,4 +35,43 @@
   border-radius: 20px;
   font-size: 13px;
   font-weight: 100;
+  margin: 0 5px;
+}
+
+// styling of the infoWindow
+//! I know i know a lot of important but it's to overwrite default google styling ==> no workaround
+.info-window-wrapper {
+  text-align: center;
+  h4 {
+    margin-bottom: 20px;
+  }
+  a:hover {
+    text-decoration: none;
+    h4 {
+      opacity: 0.75;
+    }
+  }
+}
+.gm-style .gm-style-iw-c {
+  padding: 20px 15px !important;
+  height: 150px !important;
+}
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+  height: 200px !important;
+}
+
+#map-tags {
+  justify-content: center;
+}
+
+#tags-small {
+  font-size: 11px;
+  padding: 4px 14px;
+}
+
+.infoWindow-stars {
+  margin: 10px auto;
+  text-align: center;
+  width: fit-content;
 }

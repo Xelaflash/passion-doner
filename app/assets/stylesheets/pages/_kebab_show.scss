@@ -61,6 +61,13 @@
   margin-right: 3px;
 }
 
+.stars-small {
+  height: 20px;
+  width: 20px;
+  float: left;
+  font-size: 20px;
+}
+
 .star-colored:after {
   content: "\2605";
   color: #edb867;

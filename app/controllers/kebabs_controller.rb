@@ -12,7 +12,7 @@ class KebabsController < ApplicationController
       {
         lat: kebab.latitude,
         lng: kebab.longitude,
-        infoWindow: { content: render_to_string(partial: "/kebabs/info_window", locals: { kebab: kebab }) }
+        infoWindow: { content: render_to_string(partial: '/kebabs/info_window', locals: { kebab: kebab }) }
       }
     end
   end

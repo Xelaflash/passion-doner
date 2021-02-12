@@ -1,0 +1,23 @@
+<div class="info-window-wrapper">
+  <%= link_to kebab_path(kebab) do %>
+    <h4><%= kebab.name %></h4>
+  <% end %>
+  <div class="tags-wrapper" id="map-tags">
+    <% kebab.bread_category_list.each do |tag| %>
+      <p class="tags" id="tags-small"><%= tag %></p>
+    <% end %>
+  </div>
+  <div class="infoWindow-stars">
+    <% if  kebab.reviews.present? %>
+      <% count = 0 %>
+      <% 5.times do %>
+        <% if kebab.average_rating.round > count %>
+          <span class="stars stars-small star-colored"></span>
+        <% else %>
+          <span class="stars stars-small star-blank"></span>
+        <% end %>
+        <% count += 1 %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
