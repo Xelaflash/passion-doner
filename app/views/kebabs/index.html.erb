@@ -15,13 +15,23 @@
       </div>
     <% end %>
   </div>
-  <ul>
-    <% @kebabs.each do |kebab| %>
-      <li><%= link_to kebab.name, kebab_path(kebab)%></li>
-      <p class="tags"><% kebab.bread_category_list.each do |tag| %>
-          <%= tag %>
+  <div
+  id="map"
+  style="width: 100%;
+  height: 400px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
+  <div class="kebabs_all-wrapper">
+    <ul>
+      <% @kebabs.each do |kebab| %>
+        <li><%= link_to kebab.name, kebab_path(kebab)%>
+          <div class="tags-wrapper">
+            <% kebab.bread_category_list.each do |tag| %>
+              <p class="tags"><%= tag %></p>
+            <% end %>
+          </div>
         <% end %>
-      </p>
-    <% end %>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </div>

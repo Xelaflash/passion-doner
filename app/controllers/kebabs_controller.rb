@@ -4,9 +4,16 @@ class KebabsController < ApplicationController
 
   def index
     if params[:bread_category].present?
-      @kebabs = Kebab.tagged_with(params[:bread_category])
+      @kebabs = Kebab.tagged_with(params[:bread_category]).where.not(latitude: nil, longitude: nil)
     else
-      @kebabs = Kebab.all
+      @kebabs = Kebab.where.not(latitude: nil, longitude: nil)
+    end
+    @markers = @kebabs.map do |kebab|
+      {
+        lat: kebab.latitude,
+        lng: kebab.longitude,
+        infoWindow: { content: render_to_string(partial: "/kebabs/info_window", locals: { kebab: kebab }) }
+      }
     end
   end
 
