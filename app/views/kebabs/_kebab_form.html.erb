@@ -7,7 +7,10 @@
           <%= k.input :address, input_html: {class: 'form-inputs kebab_new_inputs'}, placeholder: "75 cours de verdun 75008 Paris" %>
         </div>
         <div class="wrap-input">
-          <%= k.input :description, input_html: {class: 'form-inputs kebab_new_inputs', id:'text-input'}, label: "Description"%>
+          <%= k.input :bread_category_list, as: :check_boxes, collection: [ "Galette", "Pita", "Pain", "Turc" ], input_html: {class: 'form-check form-check-inline'}, label: "Bread Category" %>
+        </div>
+        <div class="wrap-input">
+          <%= k.input :description, input_html: {class: 'form-inputs', id:'text-input'}, label: "Description"%>
         </div>
         <div class="photo-wrapper">
           <%= k.input :photo, input_html: { class: 'd-none' , id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>

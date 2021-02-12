@@ -6,6 +6,8 @@
 <div class="container page-wrapper">
   <h1 class="title"><%= @kebab.name %></h1>
   <p class="kebab-address"><%= @kebab.address %></p>
+  <p>
+  </p>
   <div class="kebab_actions-wrapper">
     <% if user_signed_in? && current_user.admin? %>
       <hr>
@@ -52,4 +54,12 @@
   <div class="review-section">
     <%= render "reviews/new", kebab: @kebab, review: @review %>
   </div>
+</div>
+<div class="related_kebab">
+  <h3>Kebabs with same bread style</h3>
+  <ul>
+    <% @related_kebabs.each do |r| %>
+      <li><%= r.name %></li>
+    <% end %>
+  </ul>
 </div>

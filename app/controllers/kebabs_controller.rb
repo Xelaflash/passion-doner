@@ -3,12 +3,17 @@ class KebabsController < ApplicationController
   before_action :set_kebab, only: %i[show edit update destroy]
 
   def index
-    @kebabs = Kebab.all
+    if params[:bread_category].present?
+      @kebabs = Kebab.tagged_with(params[:bread_category])
+    else
+      @kebabs = Kebab.all
+    end
   end
 
   def show
     @review = Review.new
     @reviews = Review.all
+    @related_kebabs = @kebab.find_related_bread_category
   end
 
   def new
@@ -47,7 +52,7 @@ class KebabsController < ApplicationController
   private
 
   def kebab_params
-    params.require(:kebab).permit(:name, :address, :description, :photo)
+    params.require(:kebab).permit(:name, :address, :description, :photo, bread_category_list: [])
   end
 
   def set_kebab

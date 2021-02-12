@@ -33,6 +33,7 @@ gem 'font-awesome-sass'
 gem 'friendly_id'
 gem 'simple_form'
 gem 'turbolinks_render'
+gem 'acts-as-taggable-on'
 
 group :development, :test do
   gem 'dotenv-rails'

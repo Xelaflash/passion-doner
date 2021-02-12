@@ -49,10 +49,6 @@
   }
 }
 
-label {
-  font-size: 18px;
-}
-
 .form-all {
   background: white;
   padding: 20px;
@@ -81,9 +77,10 @@ label {
   vertical-align: 2px;
 }
 
-label {
-  font-size: 20px;
-  margin-bottom: 5px;
+label,
+legend {
+  font-size: 20px !important;
+  margin-bottom: 5px !important;
 }
 
 .form-control {

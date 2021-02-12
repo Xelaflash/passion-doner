@@ -5,6 +5,29 @@
 .kebab_new_inputs {
   width: 98%;
 }
+.kebab_name,
+.kebab_address {
+  width: 100%;
+}
+
+.kebab_bread_category_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  .form-check-input {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    margin: 0;
+  }
+  .collection_check_boxes {
+    font-size: 16px;
+    font-weight: 300;
+    color: $gray;
+    letter-spacing: 1px;
+  }
+}
 
 .kebab_description {
   width: 100%;

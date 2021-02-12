@@ -10,6 +10,8 @@ class Kebab < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  acts_as_taggable_on :bread_category
+
   def average_rating
     reviews.average(:overall_rating)
   end
