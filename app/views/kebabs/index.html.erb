@@ -18,7 +18,7 @@
   <ul>
     <% @kebabs.each do |kebab| %>
       <li><%= link_to kebab.name, kebab_path(kebab)%></li>
-      <p><% kebab.bread_category_list.each do |tag| %>
+      <p class="tags"><% kebab.bread_category_list.each do |tag| %>
           <%= tag %>
         <% end %>
       </p>
