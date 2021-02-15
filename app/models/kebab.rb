@@ -14,6 +14,13 @@ class Kebab < ApplicationRecord
 
   acts_as_taggable_on :bread_category
 
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_address,
+    against: [ :name, :address ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
+
   def average_rating
     reviews.average(:overall_rating)
   end

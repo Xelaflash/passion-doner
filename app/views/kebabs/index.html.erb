@@ -1,18 +1,22 @@
-<div class="container">
+<div class="container index-page">
   <h1 class="title">Passion Döner</h1>
   <% if user_signed_in? && current_user.admin? %>
     <div class="cta-wrapper">
       <%= link_to 'Add a Kebab', new_kebab_path, class: 'gradient-button text-center'%>
     </div>
   <% end %>
-  <div class="search-from-nav">
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query"  placeholder="Cherchez un Kebab"/>
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i> Search
-        </button>
-      </div>
+  <div class="search-form-nav">
+    <%= form_tag kebabs_path, method: :get, class: "search-form-control form-group" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control string required",
+        placeholder: "Find a Kebab by name or address" %>
+      <%= button_tag(type: "submit", class: "btn btn-flat") do %>
+        <i class="fas fa-search"></i> Search
+      <% end %>
+    <% end %>
+    <%= link_to request.path, class:"cancel-button" do %>
+      <i class="fas fa-times"></i>
     <% end %>
   </div>
   <div
@@ -22,16 +26,20 @@
   data-markers="<%= @markers.to_json %>"
 ></div>
   <div class="kebabs_all-wrapper">
-    <ul>
-      <% @kebabs.each do |kebab| %>
-        <li><%= link_to kebab.name, kebab_path(kebab)%>
-          <div class="tags-wrapper">
-            <% kebab.bread_category_list.each do |tag| %>
-              <p class="tags"><%= tag %></p>
-            <% end %>
-          </div>
-        <% end %>
-      </li>
-    </ul>
+    <% if @kebabs.empty? %>
+      <h6 class="text-center kebab-not_found">Désolé, nous n'avons pas trouvé de kebabs correspondants à cette recherche...</h6>
+    <% else %>
+      <ul>
+        <% @kebabs.each do |kebab| %>
+          <li><%= link_to kebab.name, kebab_path(kebab)%>
+            <div class="tags-wrapper">
+              <% kebab.bread_category_list.each do |tag| %>
+                <p class="tags"><%= tag %></p>
+              <% end %>
+            </div>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
   </div>
 </div>

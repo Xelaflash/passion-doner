@@ -1,3 +1,7 @@
+.index-page {
+  min-height: calc(100vh - 90px);
+}
+
 .cta-wrapper {
   width: fit-content;
   margin: 35px auto;
@@ -21,6 +25,12 @@
     background-position: right center;
     text-decoration: none;
   }
+}
+
+.kebab-not_found {
+  margin: 40px auto;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .tags-wrapper {

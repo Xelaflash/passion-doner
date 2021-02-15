@@ -3,8 +3,9 @@ class KebabsController < ApplicationController
   before_action :set_kebab, only: %i[show edit update destroy]
 
   def index
-    if params[:bread_category].present?
-      @kebabs = Kebab.tagged_with(params[:bread_category]).where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+      sql_query = 'name ILIKE :query OR address ILIKE :query'
+      @kebabs = Kebab.where(sql_query, query: "%#{params[:query]}%")
     else
       @kebabs = Kebab.where.not(latitude: nil, longitude: nil)
     end

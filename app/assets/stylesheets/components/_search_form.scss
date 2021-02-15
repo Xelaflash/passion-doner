@@ -1,5 +1,7 @@
-.search-from-nav {
-  min-width: 500px;
+.search-form-nav {
+  width: 600px;
+  position: relative;
+  margin: auto;
 }
 
 .search-form-control {
@@ -35,4 +37,17 @@
   border-radius: 4px;
   background: #1edd88 !important;
   transition: background 0.3s ease;
+}
+
+.cancel-button {
+  transition: all 0.3s ease;
+  color: $light-gray;
+  font-size: 22px;
+  position: absolute;
+  top: 20%;
+  right: 23%;
+
+  &:hover {
+    color: $gray;
+  }
 }
