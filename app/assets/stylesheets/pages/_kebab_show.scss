@@ -6,6 +6,21 @@
   color: $light-gray;
 }
 
+.kebab-address-small {
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.kebab-pic-wrapper {
+  margin: 12px auto;
+  text-align: center;
+}
+
+.kebab-pic {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
 .kebab_actions-wrapper {
   text-align: center;
   a {
@@ -17,18 +32,54 @@
 }
 
 .rating-section {
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
-.review-section {
-  flex-grow: 1;
+.rating-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.kebab-rating {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.review-nb {
+  padding-top: 15px;
+}
+
+.rating-details {
+  margin: 30px atuo;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.avg_rating {
+  display: flex;
+  align-items: baseline;
+  p {
+    margin: 10px;
+    font-size: 20px;
+  }
+}
+
+.reviews_content {
+  margin: 30px auto;
 }
 
 // review form
 .review_section {
-  max-width: 500px;
+  width: 550px;
 }
 #new_review {
   label {
@@ -47,6 +98,7 @@
 }
 
 .stars-wrapper {
+  height: 28px;
   p {
     margin: 1rem;
   }
@@ -54,10 +106,10 @@
 
 .stars {
   text-decoration: none;
-  height: 32px;
-  width: 32px;
+  height: 100%;
+  width: 28px;
   float: left;
-  font-size: 32px;
+  font-size: 28px;
   margin-right: 3px;
 }
 
@@ -78,9 +130,8 @@
   color: #d2d2d2;
 }
 
-#rating-txt {
-  margin-top: 20px;
-  padding-left: 15px;
+.rating-txt {
+  padding: 5px;
   font-size: 18px;
 }
 
@@ -99,6 +150,7 @@
   border-radius: 50px;
   font-weight: 400;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .btn-ghost:hover {

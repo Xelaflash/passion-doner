@@ -36,6 +36,7 @@
             <%= cl_image_tag kebab.photo.key, crop: :fill, class: "", alt: "Kebab picture - Passion Döner"%>
             <div class="card-product-infos">
               <h2><%= kebab.name %></h2>
+              <p class="kebab-address kebab-address-small"><%= kebab.address %></p>
               <div class="card-right-section">
                 <div class="tags-wrapper tags-index">
                   <% kebab.bread_category_list.each do |tag| %>

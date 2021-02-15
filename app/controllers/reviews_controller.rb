@@ -8,10 +8,11 @@ class ReviewsController < ApplicationController
 
   def create
     @kebab = Kebab.friendly.find(params[:kebab_id])
+    @related_kebabs = @kebab.find_related_bread_category
     @review = Review.new(review_params)
     @review.kebab = @kebab
     if @review.save
-      flash[:success] = 'Review successfully created'
+      flash[:notice] = 'Review successfully created'
       redirect_to kebab_path(@kebab)
     else
       render 'kebabs/show'

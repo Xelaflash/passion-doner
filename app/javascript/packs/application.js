@@ -7,10 +7,10 @@ require('@rails/ujs').start();
 require('turbolinks').start();
 require('@rails/activestorage').start();
 
-$(function() {
+$(document).on('turbolinks:load', function() {
   setTimeout(function() {
     $('.alert').fadeOut('slow');
-  }, 5000);
+  }, 4000);
 });
 
 document.addEventListener('turbolinks:load', function() {
