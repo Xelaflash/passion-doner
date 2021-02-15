@@ -15,6 +15,7 @@ $(function() {
 
 document.addEventListener('turbolinks:load', function() {
   kebabMap();
+
   initStarRating();
   previewImageOnFileSelect();
 });

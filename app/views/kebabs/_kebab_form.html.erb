@@ -4,8 +4,8 @@
       <%= simple_form_for(@kebab) do |k| %>
         <div class="wrap-input">
           <%= k.input :name, input_html: {class: 'form-inputs kebab_new_inputs'}, placeholder: "Kebab's Delight" %>
-          <%= k.input :address, input_html: {class: 'form-inputs kebab_new_inputs'}, placeholder: "75 cours de verdun 75008 Paris" %>
         </div>
+        <div class="wrap-input"> <%= k.input :address, input_html: {class: 'form-inputs kebab_new_inputs'}, placeholder: "75 cours de verdun 75008 Paris" %></div>
         <div class="wrap-input">
           <%= k.input :bread_category_list, as: :check_boxes, collection: [ "Galette", "Pita", "Pain", "Turc" ], input_html: {class: 'form-check form-check-inline'}, label: "Bread Category" %>
         </div>
