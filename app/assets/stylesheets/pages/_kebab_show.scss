@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
 .review-nb {
@@ -61,6 +61,7 @@
   margin: 30px auto;
   border-radius: 3px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
 }
 
 .flex-wrapper {
@@ -89,6 +90,10 @@
   font-size: 18px;
   text-align: center;
 }
+
+// Review content style
+
+// end
 
 // review form
 .review_section {
@@ -146,6 +151,10 @@
 .rating-txt {
   padding: 5px;
   font-size: 18px;
+}
+
+.review_author {
+  width: 100%;
 }
 
 .review_content {
