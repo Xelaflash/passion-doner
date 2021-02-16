@@ -1,30 +1,31 @@
 <div class="review_section">
   <div class="container">
     <div class="mx-auto">
-      <div>
-        <%= simple_form_for([kebab, review], remote: true,  html: { class: "review_form" }) do |f| %>
-          <%= f.error_notification %>
-          <div class="wrap-input">
-            <%= f.input :bread_rating, as: :select, collection: 1..5, label: "Bread", input_html: {class: "rating_fields"} %>
-            <%= f.input :meat_rating, as: :select, collection: 1..5, label: "Meat", input_html:{class: "rating_fields"} %>
-            <%= f.input :fries_rating, as: :select, collection: 1..5, label: "Fries", input_html: {class: "rating_fields"} %>
-          </div>
-          <div class="wrap-input">
-            <%= f.input :sauces_rating, as: :select, collection: 1..5, label: "Sauces", input_html: {class: "rating_fields"} %>
-            <%= f.input :quantity_rating, as: :select, collection: 1..5, label: "Quantity", input_html: {class: "rating_fields"}%>
-            <%= f.input :quality_price_ratio, as: :select, collection: 1..5, label: "Quality/price", input_html: {class: "rating_fields"} %>
-          </div>
-          <div class="wrap-input">
-            <%= f.input :overall_rating, as: :select, collection: 1..5, label: "Overall rating", input_html: {class: "rating_fields"} %>
-          </div>
-          <div class="wrap-input">
-            <%= f.input :content, label: "Comment your review", input_html: {id: "review-text", class: "form-inputs" } %>
-          </div>
-          <div class="wrap-input" id="create_kebab">
-            <%= f.button :submit, class: "btn btn-ghost" %>
-          </div>
-        <% end %>
-      </div>
+      <%= simple_form_for([kebab, review], remote: true,  html: { class: "review_form" }) do |f| %>
+        <%= f.error_notification %>
+        <div class="wrap-input">
+          <%= f.input :author, label: "Name",  placeholder: "Kürşat Şahin", input_html: {id: "author_name", class: "form-inputs" } %>
+        </div>
+        <div class="wrap-input">
+          <%= f.input :bread_rating, as: :select, collection: 1..5, label: "Bread", input_html: {class: "rating_fields"} %>
+          <%= f.input :meat_rating, as: :select, collection: 1..5, label: "Meat", input_html:{class: "rating_fields"} %>
+          <%= f.input :fries_rating, as: :select, collection: 1..5, label: "Fries", input_html: {class: "rating_fields"} %>
+        </div>
+        <div class="wrap-input">
+          <%= f.input :sauces_rating, as: :select, collection: 1..5, label: "Sauces", input_html: {class: "rating_fields"} %>
+          <%= f.input :quantity_rating, as: :select, collection: 1..5, label: "Quantity", input_html: {class: "rating_fields"}%>
+          <%= f.input :quality_price_ratio, as: :select, collection: 1..5, label: "Quality/price", input_html: {class: "rating_fields"} %>
+        </div>
+        <div class="wrap-input">
+          <%= f.input :overall_rating, as: :select, collection: 1..5, label: "Overall rating", input_html: {class: "rating_fields"} %>
+        </div>
+        <div class="wrap-input">
+          <%= f.input :content, label: "Comment your review", input_html: {id: "review-text", class: "form-inputs" } %>
+        </div>
+        <div class="wrap-input" id="create_kebab">
+          <%= f.button :submit, class: "btn btn-ghost" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

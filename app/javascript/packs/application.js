@@ -1,7 +1,10 @@
 import 'bootstrap';
+import $ from 'jquery';
 import { initStarRating } from '../plugins/init_star_rating';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { kebabMap } from './map';
+
+global.$ = jQuery;
 
 require('@rails/ujs').start();
 require('turbolinks').start();

@@ -1,0 +1,21 @@
+<div class="review-box" id="review-<%= review.id %>">
+  <div class="box-flex">
+    <p class="review-author"><%= review.author %></p>
+    <p class="review-date"><%= review.created_at.strftime("%d/%m/%Y")%></p>
+  </div>
+  <div class="review-overall-avg">
+    <% if  @kebab.reviews.present? %>
+      <% count = 0 %>
+      <% 5.times do %>
+        <% if @kebab.average_rating.round > count %>
+          <span class="stars-small star-colored"></span>
+        <% else %>
+          <span class="stars-small star-blank"></span>
+        <% end %>
+        <% count += 1 %>
+      <% end %>
+    <% end %>
+  </div>
+  <br>
+  <p class="review-content"><%= review.content %></p>
+</div>

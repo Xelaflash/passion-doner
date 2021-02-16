@@ -19,8 +19,8 @@ class KebabsController < ApplicationController
   end
 
   def show
-    @review = Review.new
     @reviews = Review.all
+    @review = Review.new
     @related_kebabs = @kebab.find_related_bread_category
   end
 
