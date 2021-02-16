@@ -1,0 +1,5 @@
+<% if @review.errors.any? %>
+  $('.modal-body').html('<%= j render "reviews/new", kebab: @kebab, review: @review %>');
+<% else %>
+  location.reload();
+<% end %>

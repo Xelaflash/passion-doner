@@ -13,13 +13,18 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.kebab = @kebab
     if @review.save
-      flash[:notice] = 'Review successfully created'
-      redirect_to kebab_path(@kebab, anchor: "review-#{@review.id}")
+      respond_to do |format|
+        format.html { redirect_to kebab_path(@kebab, anchor: "review-#{@review.id}") }
+        format.js
+      end
+      flash[:notice] = 'Votre commentaire a été ajouté'
     else
-      render 'kebabs/show'
+      respond_to do |format|
+        format.html { render 'kebabs/show'}
+        format.js
+      end
     end
   end
-
 
   def destroy
     @review = Review.find(params[:id])

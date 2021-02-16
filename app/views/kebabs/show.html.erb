@@ -151,9 +151,9 @@
     </div>
   </div>
   <div class="reviews_content-wrapper">
-    <h4 class="rating-title">Reviews</h4>
+    <h4 class="rating-title">Latest Reviews</h4>
     <% if  @kebab.reviews.present? %>
-      <% @reviews.limit(50).order("created_at asc").each do |review| %>
+      <% @reviews.limit(10).order("created_at asc").each do |review| %>
         <%= render 'reviews/show', review: review %>
       <% end %>
     <% else %>
