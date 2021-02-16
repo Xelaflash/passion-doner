@@ -7,7 +7,7 @@
   <h1 class="title"><%= @kebab.name %></h1>
   <p class="kebab-address"><%= @kebab.address %></p>
   <div class="kebab-pic-wrapper">
-    <%= cl_image_tag @kebab.photo.key,  width: 250, height: 250,crop: :fill, class: "kebab-pic", alt: "Kebab picture - Passion Döner"%>
+    <%= avatar_for(@kebab)%>
   </div>
   <div class="kebab-description">
     <p><%= @kebab.description %></p>
@@ -28,6 +28,7 @@
 <div class="rating-section container-fluid">
   <div class="kebab-rating-container">
     <h4 class="rating-title">Our community rated this Kebab</h4>
+    <hr class="sep">
     <div class="kebab-rating">
       <div class="stars-wrapper">
         <% if  @kebab.reviews.present? %>
@@ -48,11 +49,10 @@
             <span class="rating-txt">(<%= @kebab.reviews.count %> reviews)</span>
           <% end %>
         <% else %>
-          <p>Be the first to let a review</p>
+          <p class="no-review-msg">Be the first to let a rating</p>
         <% end %>
       </div>
     </div>
-    <hr class="sep">
     <div class="rating-details">
       <div class="flex-wrapper">
         <div class="bread_rating avg_rating">
@@ -145,15 +145,15 @@
         </div>
       </div>
     </div>
-    <hr class="sep">
     <div class="reviews_content">
-      <h4 class="rating-title">Comments</h4>
+      <h4 class="rating-title">Reviews</h4>
+      <hr class="sep">
       <% if  @kebab.reviews.present? %>
         <% @reviews.limit(5).each do |review| %>
           <p><%= review.content %></p>
         <% end %>
       <% else %>
-        <p>No reviews yet</p>
+        <p class="no-review-msg">No reviews yet</p>
       <% end %>
     </div>
   </div>

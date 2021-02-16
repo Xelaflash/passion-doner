@@ -33,7 +33,8 @@
       <div class="kebabs-cards">
         <% @kebabs.each do |kebab| %>
           <%= link_to kebab_path(kebab), class: 'card-product' do %>
-            <%= cl_image_tag kebab.photo.key, crop: :fill, class: "", alt: "Kebab picture - Passion Döner"%>
+            <%#= cl_image_tag kebab.photo.key, crop: :fill, class: "", alt: "Kebab picture - Passion Döner"%>
+            <%= avatar_for(kebab)%>
             <div class="card-product-infos">
               <h2><%= kebab.name %></h2>
               <p class="kebab-address kebab-address-small"><%= kebab.address %></p>

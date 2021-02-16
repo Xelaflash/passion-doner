@@ -13,7 +13,7 @@
           <%= k.input :description, input_html: {class: 'form-inputs', id:'text-input'}, label: "Description"%>
         </div>
         <div class="photo-wrapper">
-          <%= k.input :photo, input_html: { class: 'd-none' , id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+          <%= k.input :photo, as: :file, input_html: { class: 'd-none' , id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
           <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
         </div>
         <%= k.submit class: 'btn-kebab_new' %>

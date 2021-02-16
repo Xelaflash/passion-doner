@@ -15,10 +15,14 @@
 .kebab-pic-wrapper {
   margin: 12px auto;
   text-align: center;
+  img {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
 }
 
 .kebab-pic {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 250px;
+  height: auto;
 }
 
 .kebab_actions-wrapper {
@@ -54,7 +58,9 @@
 }
 
 .rating-details {
-  margin: 30px atuo;
+  margin: 30px auto;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .flex-wrapper {
@@ -75,6 +81,13 @@
 
 .reviews_content {
   margin: 30px auto;
+}
+
+.no-review-msg {
+  color: $red;
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
 }
 
 // review form
