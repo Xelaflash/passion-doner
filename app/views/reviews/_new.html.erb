@@ -1,14 +1,9 @@
 <div class="review_section">
   <div class="container">
     <div class="mx-auto">
-      <div class="form-all">
-        <h2 class="text-center">Rate this Döner</h2>
-        <hr class="sep">
+      <div>
         <%= simple_form_for([kebab, review], remote: true,  html: { class: "review_form" }) do |f| %>
           <%= f.error_notification %>
-          <div class="wrap-input">
-            <%= f.input :author, label: "Name",  placeholder: "Kürşat Şahin", input_html: {id: "author_name", class: "form-inputs" } %>
-          </div>
           <div class="wrap-input">
             <%= f.input :bread_rating, as: :select, collection: 1..5, label: "Bread", input_html: {class: "rating_fields"} %>
             <%= f.input :meat_rating, as: :select, collection: 1..5, label: "Meat", input_html:{class: "rating_fields"} %>
