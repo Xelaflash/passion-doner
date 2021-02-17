@@ -8,6 +8,8 @@ const kebabMap = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     map.addMarkers(markers);
 
+    const mapMarkers = [];
+
     if (markers.length === 0) {
       navigator.geolocation.getCurrentPosition(function(position) {
         const currPosLat = position.coords.latitude;

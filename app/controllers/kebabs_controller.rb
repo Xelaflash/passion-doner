@@ -49,7 +49,6 @@ class KebabsController < ApplicationController
       flash.now[:alert] = 'Problem when updating Kebab'
       render :update
     end
-
   end
 
   def destroy
