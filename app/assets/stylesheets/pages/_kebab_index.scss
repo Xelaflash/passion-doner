@@ -71,6 +71,10 @@
   height: 200px !important;
 }
 
+#map {
+  width: 80%;
+}
+
 #map-tags {
   justify-content: center;
 }
@@ -95,6 +99,7 @@
 }
 .card-product {
   margin: 15px auto 0;
+  justify-self: center;
   width: 400px;
   height: 180px;
   background: white;
@@ -140,4 +145,32 @@
 .stars-index {
   margin: 10px auto;
   width: fit-content;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  #map {
+    width: 100%;
+  }
+
+  .kebabs-cards {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  .card-product {
+    width: 340px;
+    margin: 10px 0;
+    img {
+      width: 120px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .card-product-infos {
+    grid-template-rows: minmax(20px, 45px) minmax(30px, 40px) 1fr;
+  }
+  .tags-small {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
 }

@@ -9,8 +9,8 @@
     <%= form_tag kebabs_path, method: :get, class: "search-form-control form-group" do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control string required",
-        placeholder: "Find a Kebab by name or address" %>
+        class: "form-control string required index_search",
+        placeholder: "Search a Kebab" %>
       <%= button_tag(type: "submit", class: "btn btn-flat") do %>
         <i class="fas fa-search"></i> Search
       <% end %>
@@ -21,7 +21,7 @@
   </div>
   <div
   id="map"
-  style="width: 80%;
+  style="
   height: 400px;
   margin:auto;"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -29,7 +29,7 @@
 ></div>
   <div class="kebabs_all-wrapper">
     <% if @kebabs.empty? %>
-      <h6 class="text-center kebab-not_found">Désolé, nous n'avons pas trouvé de kebabs correspondants à cette recherche...</h6>
+      <h6 class="text-center kebab-not_found">sorry we did not find any Kebab...</h6>
     <% else %>
       <div class="kebabs-cards">
         <% @kebabs.each do |kebab| %>

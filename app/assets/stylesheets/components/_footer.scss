@@ -65,3 +65,15 @@
 .flip:hover {
   animation: 1s both flip;
 }
+
+@media (max-width: 812px) {
+  .footer {
+    flex-direction: column;
+  }
+  .copyright {
+    margin: 20px auto;
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 .search-form-nav {
-  width: 600px;
+  min-width: 350px;
+  max-width: 600px;
   position: relative;
   margin: auto;
 }
@@ -45,9 +46,22 @@
   font-size: 22px;
   position: absolute;
   top: 20%;
-  right: 23%;
+  right: 133px;
 
   &:hover {
     color: $gray;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  .btn-flat {
+    padding: 5px 10px;
+  }
+  .cancel-button {
+    right: 105px;
+  }
+
+  .index_search {
+    font-size: 13px;
   }
 }

@@ -249,3 +249,38 @@
   color: $white;
 }
 // END
+
+@media (max-width: 812px) {
+  .rating-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .rate-btn {
+    margin: 40px auto 0;
+  }
+  .reviews_content-wrapper {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+  .rating-title {
+    font-size: 25px;
+  }
+  .avg_rating {
+    display: block;
+  }
+  .avg_rating p {
+    margin: 0;
+    font-size: 16px;
+  }
+  .reviews_content-wrapper {
+    width: 350px;
+  }
+  .review-box {
+    width: 100%;
+  }
+  .wrap-input {
+    display: block;
+  }
+}
