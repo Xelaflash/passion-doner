@@ -1,3 +1,7 @@
+<%# View specific meta tags %>
+<% content_for :meta_title, "#{@kebab.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @kebab.description %>
+<% content_for :meta_image, cl_image_path(@kebab.photo.path) %>
 <div class="back-to-list">
   <%= link_to kebabs_path do %>
     <i class="fa fa-history"></i> Back to list

@@ -1,5 +1,5 @@
 meta_product_name: "Passion Döner"
 meta_title: "Passion Döner - Rank your best Kebab's address"
 meta_description: "Passion Döner allows you to rank, rate, review your city's Kebabs and döners. Root for your best kebab and promote it."
-meta_image: "logo.png" # should exist in `app/assets/images/`
+meta_image: "meta_image.png" # should exist in `app/assets/images/`
 twitter_account: "@xelaflash"   # required for Twitter Cards
