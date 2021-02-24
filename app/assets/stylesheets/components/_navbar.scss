@@ -19,15 +19,16 @@
   width: 70px;
 }
 
-nav ul {
-  list-style: none;
-  text-align: center;
+.links-section {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 15px;
 }
 
 .navbar-link {
   display: block;
-  padding: 15px;
+  padding: 10px 5px;
   text-decoration: none;
   color: var(--link-color);
   font-weight: 800;
@@ -66,6 +67,7 @@ nav.stroke .navbar-link:hover:after {
 
 #navbarDropdown {
   font-size: 25px;
+  padding: 5px 0 0 20px;
   color: var(--link-color);
   cursor: pointer;
   &:hover {

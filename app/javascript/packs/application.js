@@ -2,7 +2,7 @@ import 'bootstrap';
 import { initStarRating } from '../plugins/init_star_rating';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { kebabMap } from './map';
-import { switchTheme } from '../components/darkMode';
+import { setTheme } from '../components/darkMode';
 
 global.$ = jQuery;
 
@@ -20,7 +20,10 @@ document.addEventListener('turbolinks:load', function() {
   kebabMap();
   initStarRating();
   previewImageOnFileSelect();
+  setTheme();
 });
 
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-toggleSwitch.addEventListener('change', switchTheme, false);
+document.addEventListener('turbolinks:render', function() {
+  console.log('render');
+  setTheme();
+});

@@ -4,8 +4,11 @@
   justify-content: space-around;
 }
 
-.logo-footer img {
-  width: 100px;
+.logo-footer {
+  padding: 10px;
+  img {
+    width: 80px;
+  }
 }
 
 .separator-gradient-footer {
@@ -15,7 +18,7 @@
   margin: 40px auto 20px auto;
   background: radial-gradient(
     ellipse farthest-side at top center,
-    rgba(0, 0, 0, 0.6),
+    var(--shadow),
     transparent
   );
 }

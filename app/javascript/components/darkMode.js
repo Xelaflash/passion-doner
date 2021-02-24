@@ -1,23 +1,32 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
+function initTheme() {
+  const darkThemeSelected =
+    localStorage.getItem('toggleSwitch') !== null && localStorage.getItem('toggleSwitch') === 'dark';
+  // update checkbox
+  toggleSwitch.checked = darkThemeSelected;
+  // update body data-theme attribute
+  darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
+}
+
+function resetTheme() {
+  if (toggleSwitch.checked) {
+    // dark theme has been selected
+    document.body.setAttribute('data-theme', 'dark');
+    localStorage.setItem('toggleSwitch', 'dark'); // save theme selection
   } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
+    document.body.removeAttribute('data-theme');
+    localStorage.removeItem('toggleSwitch'); // reset theme selection
   }
 }
 
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
+function setTheme() {
+  if (toggleSwitch) {
+    initTheme(); // on page load, if user has already selected a specific theme -> apply it
+    toggleSwitch.addEventListener('change', function() {
+      resetTheme(); // update color theme
+    });
   }
 }
 
-export { switchTheme };
+export { setTheme };

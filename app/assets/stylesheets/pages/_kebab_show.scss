@@ -3,7 +3,7 @@
   margin: auto;
   font-size: 18px;
   font-weight: 300;
-  color: $light-gray;
+  color: var(--link-color);
 }
 
 .kebab-address-small {
@@ -16,7 +16,7 @@
   margin: 12px auto;
   text-align: center;
   img {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: var(--shadow-light) 1.95px 1.95px 2.6px;
   }
 }
 
@@ -29,7 +29,7 @@
   margin: 20px auto;
   width: 80%;
   line-height: 2;
-  color: #212121;
+  color: var(--font-color);
   opacity: 0.75;
   text-align: justify;
   p {
@@ -72,7 +72,7 @@
 .rating-details {
   margin: 30px auto;
   border-radius: 3px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--shadow-light) 0px 2px 8px 0px;
   padding: 10px;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .review-box {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  box-shadow: var(--shadow-light) 0px 2px 8px;
   border-radius: 3px;
   padding: 10px 20px;
   width: 80%;
@@ -115,11 +115,11 @@
     font-size: 14px;
     text-transform: uppercase;
     font-style: italic;
-    color: #787878;
+    color: var(--link-color);
     margin: 10px 0;
   }
   .review-date {
-    color: $light-gray;
+    color: var(--link-color);
     font-size: 14px;
     margin: 10px 0;
   }
@@ -160,6 +160,20 @@
 .modal-title {
   margin: auto;
 }
+
+.modal-content {
+  background: var(--bg-color);
+  color: var(--font-color);
+  .close {
+    color: var(--font-color);
+  }
+}
+
+.modal-backdrop.show {
+  background-color: var(--font-color);
+  opacity: 0.75;
+}
+
 .close {
   width: fit-content;
   position: absolute;
@@ -168,6 +182,10 @@
 }
 // review form
 #new_review {
+  .form-control {
+    background: var(--bg-color);
+    color: var(--font-color);
+  }
   label {
     margin-bottom: -1px;
   }
@@ -208,12 +226,12 @@
 
 .star-colored:after {
   content: "\2605";
-  color: #edb867;
+  color: var(--stars-yellow);
 }
 
 .star-blank:after {
   content: "\2605";
-  color: #d2d2d2;
+  color: var(--stars-grey);
 }
 
 .rating-txt {

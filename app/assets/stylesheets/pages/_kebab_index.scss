@@ -102,8 +102,8 @@
   justify-self: center;
   width: 400px;
   height: 180px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background: var(--bg-color);
+  box-shadow: 0 0 15px var(--shadow-light);
   display: flex;
   align-items: center;
   transition: all 0.2s ease;
