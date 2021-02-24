@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  background: #fff;
+  background: var(--bg-color);
 }
 
 .nav-flex-right {
@@ -29,7 +29,7 @@ nav ul {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: #aaa;
+  color: var(--link-color);
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 10px;
@@ -40,7 +40,7 @@ nav ul {
 }
 
 .navbar-link:hover {
-  color: #555;
+  color: var(--link-accent);
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ nav.stroke .navbar-link:after {
   width: 0%;
   content: ".";
   color: transparent;
-  background: #aaa;
+  background: var(--link-accent);
   height: 1px;
 }
 nav.stroke .navbar-link:hover:after {
@@ -66,10 +66,10 @@ nav.stroke .navbar-link:hover:after {
 
 #navbarDropdown {
   font-size: 25px;
-  color: #aaa;
+  color: var(--link-color);
   cursor: pointer;
   &:hover {
-    color: #555;
+    color: var(--link-accent);
   }
 }
 
