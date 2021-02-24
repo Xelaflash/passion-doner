@@ -12,12 +12,31 @@
 @import "components/index";
 @import "pages/index";
 
+:root {
+  --title-color: $gray;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --title-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
 body {
   font-family: $body-font;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 a {
-  color: $gray;
+  // color: $gray;
+  color: var(--primary-color);
 }
 
 .title {
