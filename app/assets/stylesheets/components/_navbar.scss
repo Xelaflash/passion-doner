@@ -3,27 +3,34 @@
   box-shadow: 0 1px 8px #dedede;
   padding: 10px 20px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  background: #fff;
+  background: var(--bg-color);
+}
+
+.nav-flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .main-navbar img {
   width: 70px;
 }
 
-nav ul {
-  list-style: none;
-  text-align: center;
+.links-section {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 15px;
 }
 
 .navbar-link {
   display: block;
-  padding: 15px;
+  padding: 10px 5px;
   text-decoration: none;
-  color: #aaa;
+  color: var(--link-color);
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 10px;
@@ -34,7 +41,7 @@ nav ul {
 }
 
 .navbar-link:hover {
-  color: #555;
+  color: var(--link-accent);
   text-decoration: none;
 }
 
@@ -51,7 +58,7 @@ nav.stroke .navbar-link:after {
   width: 0%;
   content: ".";
   color: transparent;
-  background: #aaa;
+  background: var(--link-accent);
   height: 1px;
 }
 nav.stroke .navbar-link:hover:after {
@@ -60,9 +67,29 @@ nav.stroke .navbar-link:hover:after {
 
 #navbarDropdown {
   font-size: 25px;
-  color: #aaa;
+  padding: 5px 0 0 20px;
+  color: var(--link-color);
   cursor: pointer;
   &:hover {
-    color: #555;
+    color: var(--link-accent);
   }
+}
+
+.color_btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: $headers-font;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+.light--hidden {
+  color: #fab005;
+}
+
+.dark--hidden {
+  color: #4c44b9;
 }

@@ -16,7 +16,8 @@
 .form-control::placeholder {
   font-weight: lighter;
   font-size: 14px;
-  opacity: 0.8;
+  // opacity: 0.8;
+  color: var(--placeholder);
 }
 
 .btn-devise {
@@ -50,11 +51,13 @@
 }
 
 .form-all {
-  background: white;
+  background: var(--bg-color);
+  color: var(--font-color);
   padding: 20px;
   margin: 40px 0;
   border-radius: 3px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 25px var(--form-shadow-light),
+    0 8px 14px var(--form-shadow-light);
 
   h2 {
     font-size: 32px;

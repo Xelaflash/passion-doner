@@ -2,6 +2,7 @@ import 'bootstrap';
 import { initStarRating } from '../plugins/init_star_rating';
 import { previewImageOnFileSelect } from '../components/photo_preview';
 import { kebabMap } from './map';
+import { initTheme, handleColorClick } from '../components/darkMode';
 
 global.$ = jQuery;
 
@@ -19,4 +20,6 @@ document.addEventListener('turbolinks:load', function() {
   kebabMap();
   initStarRating();
   previewImageOnFileSelect();
+  initTheme();
+  handleColorClick();
 });
