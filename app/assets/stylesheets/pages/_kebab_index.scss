@@ -51,6 +51,7 @@
 // styling of the infoWindow
 //! I know i know a lot of important but it's to overwrite default google styling ==> no workaround
 .info-window-wrapper {
+  background: var(--bg-color);
   text-align: center;
   h4 {
     margin-bottom: 20px;
@@ -65,6 +66,7 @@
 .gm-style .gm-style-iw-c {
   padding: 20px 15px !important;
   height: 150px !important;
+  background: var(--bg-color);
 }
 .gm-style .gm-style-iw-d {
   overflow: hidden !important;
