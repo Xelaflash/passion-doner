@@ -1,6 +1,7 @@
 import { autocomplete } from '../components/autocomplete';
 
-const styles = [
+// map styles
+const darkStyles = [
   { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
   { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
   { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
@@ -80,7 +81,12 @@ const styles = [
     stylers: [{ color: '#17263c' }],
   },
 ];
+const styles = [];
+
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
 const kebabMap = () => {
+  const colorThemeSelected = localStorage.getItem('color-theme');
   const mapElement = document.getElementById('map');
   if (mapElement) {
     const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
@@ -101,11 +107,24 @@ const kebabMap = () => {
     } else {
       map.fitLatLngBounds(markers);
     }
-    // map style
-    map.addStyle({
-      styles,
-      mapTypeId: 'map_style',
-    });
+
+    // map style with color scheme
+    if (colorThemeSelected === null && prefersDarkScheme.matches) {
+      map.addStyle({
+        styles: darkStyles,
+        mapTypeId: 'map_style',
+      });
+    } else if (colorThemeSelected === 'light' || colorThemeSelected === null) {
+      map.addStyle({
+        styles,
+        mapTypeId: 'map_style',
+      });
+    } else {
+      map.addStyle({
+        styles: darkStyles,
+        mapTypeId: 'map_style',
+      });
+    }
     map.setStyle('map_style');
   }
 };
