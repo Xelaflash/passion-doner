@@ -16,11 +16,9 @@ const toggleColorTheme = e => {
   if (e.currentTarget.classList.contains('light--hidden')) {
     document.documentElement.setAttribute('color-theme', 'light');
     localStorage.setItem('color-theme', 'light');
-    console.log('local storage set to light');
   } else {
     document.documentElement.setAttribute('color-theme', 'dark');
     localStorage.setItem('color-theme', 'dark');
-    console.log('local storage set to dark');
   }
 };
 
@@ -29,7 +27,6 @@ function handleColorClick() {
   colorThemeBtns.forEach(btn => {
     btn.addEventListener('click', e => {
       toggleColorTheme(e);
-      console.log('je run kebabmap fc');
       kebabMap();
     });
   });
