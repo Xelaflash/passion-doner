@@ -24,6 +24,21 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
     <%= favicon_link_tag %>
+    <%# handle loading of font avoiding render blocking (cf lighthouse) %>
+    <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <!-- We use the full link to the CSS file in the rest of the tags -->
+    <link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Permanent+Marker&display=swap" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Permanent+Marker&display=swap"
+      media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Permanent+Marker&display=swap" />
+    </noscript>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
