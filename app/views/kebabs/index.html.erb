@@ -7,6 +7,7 @@
   <% end %>
   <div class="search-form-nav">
     <%= form_tag kebabs_path, method: :get, class: "search-form-control form-group" do %>
+      <%= label_tag 'search', nil, class: 'sr-only' %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control string required index_search",
@@ -16,6 +17,7 @@
       <% end %>
     <% end %>
     <%= link_to request.path, class:"cancel-button" do %>
+      <span class="sr-only">Reset search</span>
       <i class="fas fa-times"></i>
     <% end %>
   </div>
