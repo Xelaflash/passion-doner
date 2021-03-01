@@ -7,7 +7,7 @@
   <% end %>
   <div class="search-form-nav">
     <%= form_tag kebabs_path, method: :get, class: "search-form-control form-group" do %>
-      <%= label_tag 'search', nil, class: 'sr-only' %>
+      <%= label_tag 'query', nil, class: 'sr-only' %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control string required index_search",
