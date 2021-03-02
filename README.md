@@ -17,6 +17,7 @@ CRUD app to register (if administrator), find and rate the döner by categories.
 - PostgreSQL
 - Google API (map & places)
 - Webpack
+- Bootstrap (😎 lazy again to style all the forms)
  
 ## Features
 - Administrator logic (protected by Devise)
