@@ -8,7 +8,7 @@
   </a>
 </p>
 
-Covid lockdown side project to refresh my Rails 6 skills. 
+Covid lockdown side project to refresh my Rails 6 skills.\
 CRUD app to register (if administrator), find and rate the döner by categories.
 
 ## Stack
@@ -54,6 +54,3 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 ## Show your support
 
 Give a ⭐️ if you found this project fun or if it helped you (i see you code stealer 🤓 )
-
----
-
