@@ -22,17 +22,18 @@ bundle install & yarn install
 
 👤 **AlexWebDev**
 
-* Website: www.alexgwebdev.com
-* Twitter: [@GhostXela](https://twitter.com/GhostXela)
-* Github: [@xelaflash](https://github.com/xelaflash)
+- Website: www.alexgwebdev.com
+- Twitter: [@GhostXela](https://twitter.com/GhostXela)
+- Github: [@xelaflash](https://github.com/xelaflash)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Xelaflash/passion-doner/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Xelaflash/passion-doner/issues).
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
