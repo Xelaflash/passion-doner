@@ -8,20 +8,41 @@
   </a>
 </p>
 
-> Covid lockdown side project to refresh my Rails 6 skills. CRUD app to register (if administrator), find and rate the döner by categories.
+Covid lockdown side project to refresh my Rails 6 skills. 
+CRUD app to register (if administrator), find and rate the döner by categories.
+
+### Stack
+ Rails 6
+ Javascript (and a little bit of Jquery because i was lazy to refacto to ES6 🤷‍♂️)
+ PostgreSQL
+ Google API (map & places)
+ Webpack
+ 
+#### Features
+Administrator logic (protected by Devise)
+Administrator panel (active admin)
+Maps based on geolocation
+Autocomplte on address fields
+Upload photo (active storage)
+Rating with stars (plugin Jaqury-bar-rating)
+Search
+Dark mode (user os settings + manual toggle)
+
 
 ### 🏠 [Homepage](https://passion-doner.herokuapp.com/)
 
 ## Install
 
 ```sh
-bundle install & yarn install
+bundle install
+```
+```sh
+yarn install
 ```
 
 ## Author
 
 👤 **AlexWebDev**
-
 - Website: www.alexgwebdev.com
 - Twitter: [@GhostXela](https://twitter.com/GhostXela)
 - Github: [@xelaflash](https://github.com/xelaflash)
@@ -32,8 +53,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if you found this project fun or if it helped you (i see you code stealer 🤓)!
 
 ---
 
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
