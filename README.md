@@ -12,12 +12,14 @@ Covid lockdown side project to refresh my Rails 6 skills.\
 CRUD app to register (if administrator), find and rate the döner by categories.
 
 ## Stack
-- Rails 6
-- Javascript (and a little bit of Jquery because i was lazy to refacto to ES6 🤷‍♂️)
-- PostgreSQL
-- Google API (map & places)
-- Webpack
-- Bootstrap (😎 lazy again to style all the forms)
+- Administrator logic (protected by Devise)
+- Administrator panel (active admin)
+- Maps based on geolocation (Google API)
+- Autocomplete on address fields (Google API)
+- Upload photo (active storage)
+- Rating with stars (plugin Jquery-bar-rating)
+- Search
+- Dark mode (user os settings + manual toggle)
  
 ## Features
 - Administrator logic (protected by Devise)
